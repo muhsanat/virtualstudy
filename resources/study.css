@@ -1,0 +1,188 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248, 212, 168);
+}
+
+#title {
+    text-align: center;
+}
+
+#header {
+    /* background-color: #C4A484; */
+    font-size: x-large;
+    text-align: left;
+    margin-right: 80%;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-bottom: 50px;
+    padding: 30px 80px 15px 80px;
+    width: 30%;
+    word-wrap: break-word; 
+    box-sizing: border-box; 
+    float: left; 
+}
+
+#header h1, #header h4 {
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------TASKS LIST------------------- */
+
+.to-do-list {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: #C4A484;
+    width: 21%;
+    max-height: 40%;
+    padding: 10px;
+    border-radius: 8%;
+}
+
+.to-do-list h2 {
+    color: #5d422f;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.to-do-list h2 img {
+    width: 22px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.add-row {
+    display: flex;
+    align-items: center;
+    background-color: #F2D2BD;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+#enter-task {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+#add-button {
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background-color: #6F4E37;
+    color: #F2D2BD;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+/* Make separate container to house entries for scrolling with title+input still visible */
+.entries-container {
+    overflow: auto;
+    max-height: 135px;
+    /* No need for vertical scrollbar, it will wrap */
+    word-wrap: break-word; 
+}
+
+/* hidden but functional scrollbar */
+.entries-container::-webkit-scrollbar {  
+    display: none;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 25px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+ul li::before {
+    content: '';
+    position:absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    right: 95%;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+/* ------------------AUDIO SLIDERS-----------------*/
+#AudioFilters {
+    position: absolute;
+    top: calc(5% + 300px);
+    right: 5%;
+    width: 20%;
+
+}
+
+.audio-slider {
+    height: 4px;
+    width: 300px;
+    accent-color: #5C4033;
+}
+
+.audio-slider::before {
+    content: '';
+    position:absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-image: url(images/Speaker_Icon.svg);
+    background-size: cover;
+    background-position: center;
+    right: 100%;
+    
+
+}
+
+/* ------------------SPOTIFY----------------- */
+
+#Spotify {
+    width: 300px;
+    height: 150px;
+    margin-left: 5%;
+}
+
+#header2{
+    background-color: azure;
+
+}

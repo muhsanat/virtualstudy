@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Virtual Study Space</title>
+    <link rel="stylesheet" href="resources/study.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Coffee Crave</h1>
+        <!-- insert logo here  -->
+        <h4>grab a cup of coffee and be productive</h4>
+    </div>
+
+    <div class="to-do-list">
+            <h2 id="task-title">Tasks List <img src="/resources/images/tasklist.png"></h2>
+            <div class="add-row">
+                <input type="text" id="enter-task" placeholder="what's next?">
+                <button id="add-button" onclick="addTask()">Add</button>
+            </div>
+            <div class="entries-container">
+                <ul id="list-container"></ul>
+            </div>
+    </div>
+
+    <!-- Audio Sliders -->
+    <div id="AudioFilters">
+        
+        <!-- Rain Sounds -->
+        <div class="slider-container">
+            <h3>Rain</h3>
+            <input type="range" min="0" max="1" step="0.01" value="0" class="audio-slider" id="rain-slider">
+            <audio id="rain-audio" loop
+                src="/resources/audios/rainshortened - Made with Clipchamp.mp4">
+            </audio>
+        </div>
+
+        <!-- Fire Crackling -->
+        <div class="slider-container">
+            <h3>Fire Crackling</h3>
+            <input type="range" min="0" max="1" step="0.01" value="0" class="audio-slider" id="fire-slider">
+            <audio id="fire-audio" loop src="/resources/audios/firecrackling.wav"></audio>
+        </div>
+
+        <!-- Ocean Waves -->
+        <div class="slider-container">
+            <h3>Ocean Waves</h3>
+            <input type="range" min="0" max="1" step="0.01" value="0" class="audio-slider" id="ocean-slider">
+            <audio id="ocean-audio" loop src="/resources/audios/oceanwaves.mp4"></audio>
+        </div>
+
+        <!-- Birdsong -->
+        <div class="slider-container">
+            <h3>Birds</h3>
+            <input type="range" min="0" max="1" step="0.01" value="0" class="audio-slider" id="birds-slider">
+            <audio id="birds-audio" loop src="/resources/audios/birdsong.wav"></audio>
+        </div>
+
+    </div>
+
+    <!-- SPOTIFY API or EMBED ? -->
+    <div id="Spotify">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4pLS8MzMx0WW9Msstwu8Nw?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>   
+     
+<script src="study.js"></script>
+</body>
+</html>
